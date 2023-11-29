@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ahmed.orangechallenge.ui.home.HomeFragment"
+        android:label="fragment_home" />
+
+    <action
+        android:id="@+id/action_to_detailsFragment"
+        app:destination="@id/detailsFragment" />
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.ahmed.orangechallenge.ui.details.DetailsFragment"
+        android:label="fragment_details">
+        <argument
+            android:name="movie"
+            app:argType="com.ahmed.domain.model.movie.Movie" />
+    </fragment>
+
+</navigation>
